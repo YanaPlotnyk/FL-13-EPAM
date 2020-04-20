@@ -1,0 +1,279 @@
+*{
+  margin: 0;
+}
+body {
+  padding: 0 2%;
+  font-family: roboto;
+  font-weight: 100;
+  background-color: #0b192f;
+  color: #484848;
+}
+
+header, footer{
+  background-color: #162b4d;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-menu{
+  display: flex;
+  list-style-type: none;
+  margin: 0 80px;
+}
+.navigation-menu li{
+  padding: 40px;
+}
+.navigation-menu li:hover{
+  background-color: #445570;
+  opacity: 0.5;
+  cursor: pointer;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+}
+h1{
+  font-weight: 100;
+  padding: 20px;
+}
+h1 span{
+  color: #761a4f;
+  font-weight: 100;
+}
+
+main, .main-articles{
+  display: flex;
+}
+.section-for-articles{
+  width: 75%;
+  padding: 20px 20px 20px 0;
+}
+.section-for-articles div:nth-child(even){
+  flex-direction: row-reverse;
+}
+.main-articles img{
+  width: 50%;
+  object-fit: cover;
+}
+.main-articles img:hover, .main-articles .posts:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.posts{
+  padding: 2em;
+  position: relative;
+}
+.posts h2{
+  font-weight: 100;
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+}
+.posts p{
+  line-height: 1.6;
+}
+.posts time{
+  display: block;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+}
+.posts time span{
+  font-size: 1.2em;
+}
+.post-1 {
+  background: #F3D250;
+}
+.post-2 {
+  background: #8D8741;
+}
+.post-3 {
+  background: #659DBD;
+}
+.post-4 {
+  background: #DAAD86;
+}
+.main-articles:last-child{
+  position: relative;
+}
+.main-articles:last-child img{
+  width: 100%;
+}
+.main-articles:last-child .posts{
+  color: #fff;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+.section-for-news{
+  width: 25%;
+}
+.posts h3{
+  font-size: 1.8em;
+  font-weight: 100;
+  padding-bottom: 0.5em;
+}
+.news{
+  background: #fff;
+  margin: 20px 0;
+}
+.news img{
+  width: 100%;
+
+}
+.news button{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px #434343 solid;
+}
+.news button:hover{
+  cursor: pointer;
+  border: 1px #fff solid;
+  border-bottom: 1px #434343 solid;
+}
+footer{
+  color: #838ea0;
+  padding: 1.5em;
+  line-height: 1.5;
+}
+
+
+@media screen and (min-width: 768px){
+  .section-for-articles div:nth-child(even):not(:last-child) .posts{
+    padding-left: 7em;
+    text-align: right;
+
+  }
+  .section-for-articles div:nth-child(odd):not(:last-child) .posts{
+    padding-right: 7em;
+  }
+  .section-for-articles div:nth-child(even) .posts time{
+    position: absolute;
+    width: 3em;
+    top: 0.5em;
+    left: 0;
+}
+  .section-for-articles div:nth-child(odd) .posts time{
+    position: absolute;
+    width: 3em;
+    top: 0.5em;
+    right: 0;
+  }
+  .posts time span{
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 768px){
+  nav{
+    display: none;
+  }
+  header{
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  h1{
+     padding: 100px 20px 20px;
+  }
+  h1::before{
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    top: 0;
+    left: 45%;
+    content: "\f0c9";
+    font-weight: 600;
+    font-size: small;
+    padding: 20px;
+  }
+  main{
+    flex-wrap: wrap;
+  }
+  .section-for-articles{
+    box-sizing: border-box;
+    width: 60%;
+    padding: 20px 20px 20px 0;
+  }
+  .section-for-news{
+    width: 40%;
+  }
+  .main-articles{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .main-articles:last-child img{
+    object-fit: none;
+    height: fit-content;
+  }
+  .main-articles:last-child .posts{
+    transform: translate(-50%, -50%);
+  }
+  .section-for-articles img{
+    width: 100%;
+  }
+
+  .news button{
+    background: #fff;
+  }
+  footer{
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  nav{
+    display: none;
+  }
+  header{
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  h1{
+     padding: 100px 20px 20px;
+  }
+  h1::before{
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    top: 0;
+    left: 45%;
+    content: "\f0c9";
+    font-weight: 600;
+    font-size: small;
+    padding: 20px;
+  }
+  main{
+    flex-wrap: wrap;
+  }
+  .section-for-articles, .section-for-news{
+    width: 100%;
+    padding: 0;
+  }
+  .main-articles{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .main-articles:last-child img{
+    object-fit: none;
+    height: fit-content;
+  }
+  .main-articles:last-child .posts{
+    transform: translate(-50%, -50%);
+  }
+  .section-for-articles img{
+    width: 100%;
+  }
+
+  .news button{
+    background: #fff;
+  }
+  footer{
+    display: block;
+    text-align: center;
+  }
+}
