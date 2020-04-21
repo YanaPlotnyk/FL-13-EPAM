@@ -28,6 +28,7 @@ header, footer{
   background-color: #445570;
   opacity: 0.5;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
 nav a{
   color: #fff;
@@ -59,6 +60,7 @@ main, .main-articles{
 .main-articles img:hover, .main-articles .posts:hover {
   opacity: 0.5;
   cursor: pointer;
+  transition-duration: 0.4s;
 }
 .posts{
   padding: 2em;
@@ -133,6 +135,7 @@ main, .main-articles{
   cursor: pointer;
   border: 1px #fff solid;
   border-bottom: 1px #434343 solid;
+  transition-duration: 0.4s;
 }
 footer{
   color: #838ea0;
