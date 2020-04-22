@@ -12,8 +12,8 @@ function bill(sum,tips){
 	let sumTotal = sum + tipAmount;
 	alert('Check number: ' + sum 
 		+ '\nTip: ' + tips +'%'
-		+'\nTip amount: ' + tipAmount.toFixed(2) 
-		+'\nTotal sum to pay: ' + sumTotal.toFixed(2))
+		+ '\nTip amount: ' + tipAmount.toFixed(2) 
+		+ '\nTotal sum to pay: ' + sumTotal.toFixed(2));
 }
 
 bill(sum,tips);
