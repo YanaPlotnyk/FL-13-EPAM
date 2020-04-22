@@ -4,7 +4,7 @@ let tips = Number(prompt('Percentage tip on the bill?', 10));
 tips = Number(tips.toFixed(2));
 
 function bill(sum,tips){
-	if (isNaN(sum) || sum<0 || tips<0 || tips>100) {
+	if (isNaN(sum) || sum<0 || isNaN(tips) || tips<0 || tips>100) {
 		alert('Invalid input data');
 		return false;
 	}
