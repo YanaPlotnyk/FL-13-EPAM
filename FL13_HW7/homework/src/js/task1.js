@@ -12,7 +12,7 @@ if(loginUser === null || loginUser.trim() === ''){
 	passwordUser = prompt('Enter your parrword', 'password');
 	if (passwordUser !== 'UserPass') {
 		alert('Wrong password');
-	} else if(currentTime < 20){
+	} else if(currentTime < 20 && currentTime > 8){
 		alert('Good day, dear User!');
 	} else{
 		alert('Good evening, dear User!');
@@ -21,7 +21,7 @@ if(loginUser === null || loginUser.trim() === ''){
 	passwordUser = prompt('Enter your parrword', 'password');
 	if (passwordUser !== 'RootPass') {
 		alert('Wrong password');
-	} else if(currentTime < 20){
+	} else if(currentTime < 20 && currentTime > 8){
 		alert('Good day, dear Admin!');
 	} else{
 		alert('Good evening, dear Admin!');
