@@ -1,27 +1,27 @@
-let loginUser = prompt('Enter your login', 'User');
+const LOGINUSER = prompt('Enter your login', 'User');
 let passwordUser = "";
-let currentTime = new Date().getHours();
+const CURRENTTIME = new Date().getHours();
 
-if(loginUser === null || loginUser.trim() === ''){
+if(LOGINUSER === null || LOGINUSER.trim() === ''){
 	alert('Canceled.');
-}else if (loginUser.length < 4){
+}else if (LOGINUSER.length < 4){
 	alert('I don\'t know any users having name length less than 4 symbols');
-}else if(loginUser !== 'User' && loginUser !== 'Admin'){
+}else if(LOGINUSER !== 'User' && LOGINUSER !== 'Admin'){
 	alert('I don\'t know you');
-}else if (loginUser === 'User'){
+}else if (LOGINUSER === 'User'){
 	passwordUser = prompt('Enter your parrword', 'password');
 	if (passwordUser !== 'UserPass') {
 		alert('Wrong password');
-	} else if(currentTime < 20 && currentTime > 8){
+	} else if(CURRENTTIME < 20 && CURRENTTIME > 8){
 		alert('Good day, dear User!');
 	} else{
 		alert('Good evening, dear User!');
 	}
-}else if (loginUser === 'Admin'){
+}else if (LOGINUSER === 'Admin'){
 	passwordUser = prompt('Enter your parrword', 'password');
 	if (passwordUser !== 'RootPass') {
 		alert('Wrong password');
-	} else if(currentTime < 20 && currentTime > 8){
+	} else if(CURRENTTIME < 20 && CURRENTTIME > 8){
 		alert('Good day, dear Admin!');
 	} else{
 		alert('Good evening, dear Admin!');
