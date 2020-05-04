@@ -101,18 +101,3 @@ function formatDate(date){
 		months = date.getMonth() < CHECK - 1 ? '0' +(date.getMonth() + 1) : date.getMonth() + 1;
 	return `${date.getFullYear()}/${months}/${day} ${hours}:${minutes}`
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
