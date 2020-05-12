@@ -3,9 +3,11 @@
 }
 li {
 	list-style: none;
+	margin: 2px;
 }
 span {
 	display: list-item;
+	position: relative;
 }
 span:hover {
 	cursor: pointer;
@@ -32,4 +34,15 @@ i {
 	content: '--Folder is empty';
 	font-style: italic;
 }
-
+.context-menu {
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	background: #f5f5f5;
+	border-radius: 2px;
+	box-shadow: 2px 1px 6px #c1c1c1;
+}
+.context-menu li:hover {
+	cursor: pointer;
+	background-color: #d8d8d8;
+}

@@ -78,19 +78,27 @@ function createTreeDom(container,arr,hidden) {
 createTreeDom(rootNode, data, false);
 
 const lis = document.querySelectorAll('li');
-
 for (let li of lis) {
 	let span = document.createElement('span');
 	li.prepend(span);
 	span.append(span.nextSibling);
 }
 
+// --- add input elements ---
+
+// const spans = document.querySelectorAll('span');
+// for (let span of spans) {
+// 	let input = document.createElement('input');
+// 	span.prepend(input);
+// 	input.append(input.nextSibling);
+// }
+
 document.onclick = function(event) {
 	if (event.target.tagName !== 'SPAN') {
 		return
 	}
-	changeClass(event.target.parentNode);
 	let parent = event.target.parentNode;
+	changeClass(parent);
 	let childrenContainer = parent.querySelector('ul');
 	
 	if (parent.className !== 'file') {
@@ -136,6 +144,60 @@ lis.forEach(li => {
 		li.firstChild.insertAdjacentHTML('afterbegin','<i class="material-icons">folder_open</i>')
 	}
 })
+
+const dataMenu = [
+	{
+		'title': 'Rename'
+	},
+	{
+		'title': 'Delete item'
+	}
+]
+
+function createContextMenu(container,arr,hidden) {
+	let ul = document.createElement('ul');
+	ul.hidden = hidden;
+	ul.className = 'context-menu';
+	arr.forEach(obj => {
+		const textNode = document.createTextNode(obj['title']);
+		let li = document.createElement('li');
+		li.appendChild(textNode);	
+		ul.appendChild(li);
+		
+		container.append(ul)
+	})
+}
+createContextMenu(rootNode, dataMenu, true);
+
+const menu = document.querySelector('.context-menu');
+
+rootNode.addEventListener('contextmenu', event => {
+	event.preventDefault();
+	menu.style.top = `${event.clientY}px`;
+	menu.style.left = `${event.clientX}px`;
+	menu.hidden = false;
+
+	let parent = event.target.parentNode;
+
+	menu.addEventListener('click', ev => {
+		// if (ev.target.textNode === 'Rename') {
+
+		// }
+		if (ev.target.innerHTML === 'Delete item') {	
+			parent.parentNode.remove();
+		}
+}, false);
+
+
+}, false);
+
+document.addEventListener('click', event => {
+	if (event.button !== 2) {
+		menu.hidden = true;
+	}
+}, false);
+
+
 
 
 
