@@ -178,7 +178,16 @@ rootNode.addEventListener('contextmenu', event => {
 	menu.hidden = false;
 
 	let parent = event.target.parentNode;
-	let hightParent = parent.parentNode
+	let hightParent = parent.parentNode;
+	let contextChilds = menu.childNodes;
+
+	for (let li of contextChilds) {
+		if (event.target.tagName === 'DIV') {
+			li.classList.toggle('li-context-menu',false);
+		} else {
+			li.classList.toggle('li-context-menu',true);
+		}
+	}
 
 	menu.addEventListener('click', ev => {
 		// if (ev.target.textNode === 'Rename') {

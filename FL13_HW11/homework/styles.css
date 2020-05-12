@@ -31,7 +31,7 @@ i {
 	color: #a2a2a2;
 }
 .empty::after {
-	content: '--Folder is empty';
+	content: 'Folder is empty';
 	font-style: italic;
 }
 .context-menu {
@@ -42,7 +42,7 @@ i {
 	border-radius: 2px;
 	box-shadow: 2px 1px 6px #c1c1c1;
 }
-.context-menu li:hover {
+.li-context-menu:hover {
 	cursor: pointer;
 	background-color: #d8d8d8;
 }
