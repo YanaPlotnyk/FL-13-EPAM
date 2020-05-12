@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+span {
+	display: list-item;
+}
+span:hover {
+	cursor: pointer;
+	background-color: #d8d8d8;
+}
+#root {
+	margin: 0 auto;
+	width: 400px;
+	box-shadow: 0 0 16px #888888;
+	border-radius: 5px;
+	padding: 20px 40px;
+}
+i {
+	position: relative;
+	top: 5px;
+}
+.folder i {
+	color: #f5c304;
+}
+.file i {
+	color: #a2a2a2;
+}
+.empty::after {
+	content: '--Folder is empty';
+	font-style: italic;
+}
+
