@@ -184,10 +184,9 @@ rootNode.addEventListener('contextmenu', event => {
 
 		// }
 		if (ev.target.innerHTML === 'Delete item') {	
-			parent.parentNode.remove();
+			parent.remove();
 		}
-}, false);
-
+	}, false);
 
 }, false);
 
