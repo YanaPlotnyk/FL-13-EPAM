@@ -178,6 +178,7 @@ rootNode.addEventListener('contextmenu', event => {
 	menu.hidden = false;
 
 	let parent = event.target.parentNode;
+	let hightParent = parent.parentNode
 
 	menu.addEventListener('click', ev => {
 		// if (ev.target.textNode === 'Rename') {
@@ -185,6 +186,9 @@ rootNode.addEventListener('contextmenu', event => {
 		// }
 		if (ev.target.innerHTML === 'Delete item') {	
 			parent.remove();
+			if (hightParent.childNodes.length === 0) {
+				hightParent.classList.toggle('empty', true)
+			}	
 		}
 	}, false);
 
