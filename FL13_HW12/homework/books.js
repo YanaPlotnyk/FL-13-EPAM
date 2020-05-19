@@ -34,8 +34,6 @@ let books = [
 	}
 ];
 
-// let _books = JSON.parse(localStorage.getItem('books')) || books;
-
 window.addEventListener('unload', () => {
 	localStorage.setItem('books', JSON.stringify(books));
 });
