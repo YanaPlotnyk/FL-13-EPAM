@@ -1,0 +1,14 @@
+/* Your code goes here */
+form {
+	margin: 10px 0;
+}
+input {
+	width: 150px;
+}
+.user-id {
+	width: 100px;
+	border: none;
+}
+button:hover {
+	cursor: pointer;
+}
